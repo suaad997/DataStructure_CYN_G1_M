@@ -62,7 +62,7 @@ Scanner scanner=new Scanner(System.in);
     public int BinarySearch(int[]a, int findex, int lindex,int svalue){
         while (findex<=lindex){
             int mid=(findex+lindex)/2;
-            System.out.println("mid ="+mid);//4
+           // System.out.println("mid ="+mid);//4
             if(svalue==a[mid])
                 return mid;
             if(svalue>a[mid])
@@ -70,8 +70,6 @@ Scanner scanner=new Scanner(System.in);
             if(svalue<a[mid])
                 lindex=mid-1;
         }
-
-
 
 
         return -1;
