@@ -12,7 +12,6 @@ public int size()
 public boolean isEmpty(){
     return size()==0;
 }
-
 public void addfirst(E data){
 Node<E> newNode=new Node(data,head);
 head=newNode;
@@ -25,7 +24,6 @@ public E getFirst(){
     if (isEmpty())return null;
     return head.getData();
 }
-
 public E removeFirst(){
     if (isEmpty())return null;
     E delete= head.getData();
