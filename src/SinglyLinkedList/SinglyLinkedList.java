@@ -43,6 +43,41 @@ public void display(){
     System.out.println("null \n");
 
 }
+public void addLast(E data){
+    Node<E> newNode=new Node(data,null);
+    if(isEmpty()){
+        head=newNode;
+    }
+    else {
+        tail.setNext(newNode);
+    }
+    tail=newNode;
+    size++;
+
+}
+
+public E getLast(){
+        if (isEmpty())return null;
+        return tail.getData();
+    }
+public E removeLast(){
+    if(isEmpty())return null;
+    E delete=tail.getData();
+    if (head==tail){
+       head=tail=null;
+    }
+    else {
+        Node<E>temp=head;
+        while (temp.getNext()!=tail){
+            temp=temp.getNext();
+        }temp.setNext(null);
+        tail=temp;
+
+    }
+    size--;
+return delete;
+}
+
 
 
 
