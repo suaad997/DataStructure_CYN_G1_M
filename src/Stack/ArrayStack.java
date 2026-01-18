@@ -14,26 +14,39 @@ public class ArrayStack<E> implements Stack<E>{
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return size()==0;
     }
 
     @Override
     public int size() {
-        return 0;
+        return t+1;
     }
 
     @Override
     public void push(E data) {
-
+        if(size()==arr.length){
+//            System.out.println("Cant add, Stack is full");
+            throw new IllegalStateException("Can't add, Stack is full");
+        }
+        else {
+            arr[++t]=data;
+        }
     }
 
     @Override
     public E pop() {
-        return null;
+        if (isEmpty())return null;
+        E delete=arr[t];
+        arr[t]=null;
+        t--;
+        return delete;
+
     }
 
     @Override
     public E top() {
-        return null;
+        if (isEmpty())return null;
+        return arr[t];
+
     }
 }

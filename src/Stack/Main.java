@@ -2,16 +2,16 @@ package Stack;
 
 public class Main {
     public static void main(String[] args) {
-        SlinkedStack<Integer> lstack=new SlinkedStack<Integer>();
-        lstack.push(10);
-        lstack.push(20);
-        lstack.push(30);
-        lstack.push(40);
-        System.out.println("the top is"+lstack.top());
+        ArrayStack<Integer> astack=new ArrayStack<Integer>();
+        astack.push(10);
+        astack.push(20);
+        astack.push(30);
+        astack.push(40);
+        System.out.println("the top is: "+astack.top());
 
 
-        while (!lstack.isEmpty()){
-            System.out.println("element removerd:"+lstack.pop());
+        while (!astack.isEmpty()){
+            System.out.println("element removerd:"+astack.pop());
         }
 
 
